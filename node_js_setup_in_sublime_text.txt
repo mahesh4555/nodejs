@@ -1,0 +1,25 @@
+Open SublimeText
+
+Tools -> BuildSystem
+
+untitled.sublime.build will open as file
+
+Delete the existing contents and copy paste the below contents
+and save it as JavaScript.sublime.build
+
+{
+	"cmd": ["C:/Program Files/nodejs/node.exe", "$file"],
+	"selector" : "source.js"
+}
+
+
+
+Then, create js file
+Tools -> Build  to run
+Tools -> Cancel Build to stop
+
+
+Similarly, open any js file,
+Tools -> Build  to run
+Tools -> Cancel Build to stop
+
