@@ -13,6 +13,7 @@ var mailOptions = {
   to: 'xxxxxxxxxx@gmail.com','yyyy@gmail.com',
   subject: 'Sending Email using Node.js',
   text: 'That was easy!'
+ // html: '<h1>Welcome</h1><p>That was easy!</p>'  // msg will appear as appers in webpage, not as html tags
 };
 
 transporter.sendMail(mailOptions, function(error, info){
