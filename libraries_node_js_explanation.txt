@@ -1,0 +1,92 @@
+//express -  framework
+
+/*morgan  - HTTP request logger middleware for node.js
+            var morgan = require('morgan')
+            morgan(format, options)
+            Create a new morgan logger middleware function using the given format and options. 
+            The format argument may be a string of a predefined name (see below for the names), 
+            a string of a format string, or a function that will produce a log entry.
+
+            The format function will be called with three arguments tokens, req, and res, 
+            where tokens is an object with all defined tokens, req is the HTTP request and 
+            res is the HTTP response. 
+            The function is expected to return a string that will be the log line, or
+            undefined / null to skip logging.
+
+            Using a predefined format string
+            morgan('tiny')
+            Using format string of predefined tokens
+            morgan(':method :url :status :res[content-length] - :response-time ms')
+
+            Custom function for formatting the string..
+            
+            For more options(eg.custom function and options), https://www.npmjs.com/package/morgan#morganformat-options
+*/
+
+/*winston  - winston is designed to be a simple and universal logging library with support for 
+             multiple transports. A transport is essentially a storage device for your logs.
+             Each winston logger can have multiple transports (see: Transports) configured at 
+             different levels (see: Logging levels).
+
+             winston aims to decouple parts of the logging process to make it more flexible and extensible
+*/
+
+/*body-parser - Node.js body parsing middleware.
+
+                Parse incoming request bodies in a middleware before your handlers, 
+                available under the req.body property.
+
+                This module provides the following parsers:
+
+                    JSON body parser
+                    Raw body parser
+                    Text body parser
+                    URL-encoded form body parser
+
+                bodyParser.json([options])
+                Returns middleware that only parses json and only looks at requests 
+                where the Content-Type header matches the type option. 
+
+                bodyParser.urlencoded([options])  (url's are in a encoded format(structured))
+                Returns middleware that only parses urlencoded bodies and only looks at requests 
+                where the Content-Type header matches the type option. 
+
+                URL-Encoded Form is a widely-supported encoding on the web. 
+                It's most often used for serializing web forms sent via POST requests. 
+                This encoding is also used to send structured data in URL query strings
+
+
+                For more options, https://www.npmjs.com/package/body-parser#bodyparserurlencodedoptions
+*/
+
+/*cors -  Cross-Origin Resource Sharing (CORS) is a protocol that enables scripts running on a 
+          browser client to interact with resources from a different origin. This is useful because, 
+          thanks to the same-origin policy followed by XMLHttpRequest and fetch, JavaScript can only 
+          make calls to URLs that live on the same origin as the location where the script is running. 
+          For example, if a JavaScript app wishes to make an AJAX call to an API running on a different 
+          domain, it would be blocked from doing so thanks to the same-origin policy.
+
+          API calls to some other websites in node express server is blocked by default for security,
+          In order to allow that, cors is enabled.
+*/
+
+/*dotenv - Dotenv is a zero-dependency module that loads environment variables
+           from a .env file into process.env. Storing configuration in the environment separate 
+           from code is based on The Twelve-Factor App methodology.
+            Create a .env file in the root directory of your project. 
+            Add environment-specific variables on new lines in the form of NAME=VALUE. For example:
+
+            DB_HOST=localhost
+            DB_USER=root
+            DB_PASS=s1mpl3
+            process.env now has the keys and values you defined in your .env file.
+
+            You may specify a custom path if your file containing environment variables is located elsewhere.
+            require('dotenv').config({ path: '/full/custom/path/to/your/env/vars' })
+
+            You may specify the encoding of your file containing environment variables.
+            require('dotenv').config({ encoding: 'latin1' })
+
+
+            More options are available : https://www.npmjs.com/package/dotenv
+*/
